@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #161616;
+    color: rgba(255, 255, 255, 0.55);
+}
+main {
+    min-height: 48vh;
+}
+
+a,
+p,
+span {
+    color: rgba(255, 255, 255, 0.55) !important;
+}
+li {
+    list-style: none;
+}
+.nav-link{
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #7f1619;
+    transition: width 0.3s ease-out;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+.nav-link:hover{
+    transform: scale(1.1);
+}
+a:hover {
+    color: #fff !important;
+}
+.hover-none:hover {
+    color: inherit !important;
+}
+.text-bg-dark {
+    color: rgba(255, 255, 255, 0.55) !important;
+}
+input {
+    background-color: #161616 !important;
+    border: 1px solid #242424 !important;
+    color: rgba(255, 255, 255, 0.55) !important;
+}
+input:focus {
+    background-color: #161616 !important;
+    border: 1px solid #242424 !important;
+    color: rgba(255, 255, 255, 0.55) !important;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    box-shadow: none !important;
+}
+input::-ms-clear {
+    display: none;
+}
+input::-ms-reveal {
+    display: none;
+}
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+$custom: #7f1619;
+$custom2: #161616;
+$quase-branco: rgba(255, 255, 255, 0.55);
+
+header {
+    background-color: #242424 !important;
+}
+.text-quase-branco {
+    color: $quase-branco !important;
+}
+.btn-custom {
+    color: #ccc;
+    background-color: $custom !important;
+    border-color: $custom !important;
+}
+.btn-custom:hover {
+    color: #fff;
+    background-color: darken($custom2, 10%);
+    border-color: darken($custom2, 10%);
+}
+.btn-custom:focus {
+    background-color: darken($custom2, 10%);
+    border-color: darken($custom2, 10%);
+    color: #fff;
+}
+.btn-outline-custom {
+    color: #ccc !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: $custom !important;
+}
+.btn-outline-custom:hover {
+    color: #fff !important;
+    background-color: $custom !important;
+    border-color: $custom !important;
+}
+.btn-outline-custom:focus {
+    box-shadow: none;
+}
+
+.bg-custom {
+    background-color: $custom !important;
+}
+.bg-custom2 {
+    background-color: $custom2 !important;
+}
+
+.text-custom {
+    color: $custom !important;
+}
+
+//    custom-select
+.custom-select {
+    position: relative;
+    display: inline-block;
+    /* Defina a largura e altura da lista personalizada aqui */
+}
+
+.custom-select select {
+    display: none; /* Oculta o elemento select original */
+}
+
+.custom-select option {
+    background-color: #ffffff; /* Cor de fundo padrão dos itens */
+    color: #000000; /* Cor padrão do texto dos itens */
+}
+
+.custom-select option:hover {
+    background-color: #f8f9fa; /* Cor de fundo ao passar o mouse sobre um item */
+    color: #212529; /* Cor do texto ao passar o mouse sobre um item */
+}
+
+.custom-select:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff; /* Cor de fundo da lista personalizada */
+    border: 1px solid #ced4da; /* Estilo da borda da lista personalizada */
+    /* Defina outros estilos de borda, arredondamento de canto etc. aqui */
+}
+
+.custom-select:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Posição do ícone de seta */
+    transform: translateY(-50%);
+    border-top: 6px solid #555; /* Estilo da seta */
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.custom-select select:focus + .custom-select:before {
+    border-color: #80bdff; /* Cor da borda ao selecionar a lista personalizada */
+}
+
+.custom-select select:focus + .custom-select:after {
+    border-top-color: #007bff; /* Cor da seta ao selecionar a lista personalizada */
+}
+
+.hover-dark:hover {
+    color: #000 !important;
+}
+
+.footer-link{
+    text-decoration: none;
+}
+.footer-link:hover{
+    text-decoration: underline;
+}
